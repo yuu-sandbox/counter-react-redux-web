@@ -139,6 +139,19 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "alias": {
+            "@root": "./src"
+          }
+        }
+      ]
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^4.0.0"
   }
 }
