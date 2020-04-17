@@ -6,12 +6,18 @@ import {
 } from 'react-router-dom';
 
 import Counter from '@root/components/Counter';
+import CounterAsync from '@root/components/CounterAsync';
 
 function App() {
     return (
         <Router>
           <Switch>
-            <Route exact path='/' component={Counter} />
+            <Route exact path='/'>
+              <>
+                <Counter/>
+                <CounterAsync/>
+              </>
+            </Route>
           </Switch>
         </Router>
     );
