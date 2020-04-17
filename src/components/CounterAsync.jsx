@@ -18,7 +18,7 @@ const CounterInner = ({ counter, onFetch }) => {
 const CounterAsync = () => {
     /* TOP Layer redux data flow
      */
-    const counter = useSelector(state => state.counterReducerAsync.counter);
+    const counter = useSelector(state => state.counterAsync.counter);
     const dispatch = useDispatch();
     const onFetch = (amount = 1) => dispatch(AC.fetchReqCount(amount));
 

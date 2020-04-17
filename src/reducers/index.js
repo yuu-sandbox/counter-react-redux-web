@@ -4,8 +4,8 @@ import counterReducer from './counter';
 import counterReducerAsync from './counterAsync';
 
 const rootReducer = combineReducers({
-    counterReducer,
-    counterReducerAsync,
+    counter: counterReducer,
+    counterAsync: counterReducerAsync,
 });
 // const rootReducer = counterReducer;
 

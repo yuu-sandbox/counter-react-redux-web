@@ -21,7 +21,7 @@ const CounterInner = ({ counter, onIncrement, onDecrement }) => {
 const Counter = () => {
     /* TOP Layer redux data flow
      */
-    const counter = useSelector(state => state.counterReducer.counter);
+    const counter = useSelector(state => state.counter.counter);
     const dispatch = useDispatch();
     const onIncrement = () => dispatch(ActionCreator.increment());
     const onDecrement = () => dispatch(ActionCreator.decrement());
