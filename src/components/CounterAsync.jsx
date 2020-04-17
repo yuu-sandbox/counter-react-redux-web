@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import * as AC from '@root/actionCreators/counterAsync';
 
-const CounterInner = ({ counter, onFetch }) => {
+const CounterFetch = ({ counter, onFetch }) => {
     return (
         <>
           <p>
@@ -15,14 +15,4 @@ const CounterInner = ({ counter, onFetch }) => {
     );
 };
 
-const CounterAsync = () => {
-    /* TOP Layer redux data flow
-     */
-    const counter = useSelector(state => state.counterAsync.counter);
-    const dispatch = useDispatch();
-    const onFetch = (amount = 1) => dispatch(AC.fetchReqCount(amount));
-
-    return CounterInner({counter, onFetch});
-};
-
-export default CounterAsync;
+export default CounterFetch;
